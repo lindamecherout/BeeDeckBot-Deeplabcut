@@ -1,0 +1,67 @@
+    # Project definitions (do not edit)
+Task: 2dbeetestdroite
+scorer: lili
+date: Jun2
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestdroite-lili-2024-06-02
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestdroite-lili-2024-06-02\videos\camera-1-02.MP4:
+    crop: 0, 720, 0, 640
+  C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestdroite-lili-2024-06-02\videos\camera-1-03.MP4:
+    crop: 0, 720, 0, 640
+bodyparts:
+- beehead
+- beecenter
+- beeback
+- flowright
+- flowleft
+- flowcenter
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 60
+
+    # Plotting configuration
+skeleton:
+- - beehead
+  - beecenter
+- - beecenter
+  - beeback
+- - flowright
+  - flowcenter
+- - flowcenter
+  - flowleft
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 3
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true

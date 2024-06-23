@@ -1,0 +1,38 @@
+# Project definitions (do not edit)
+Task: bee3d
+scorer: lili
+date: Jun3
+
+# Project path (change when moving around)
+project_path: C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\3d\bee3d-lili-2024-06-03-3d
+
+# Plotting configuration
+skeleton:     # Note that the pairs must be defined, as you want them linked!
+- - beehead
+  - beecenter
+- - beecenter
+  - beeback
+- - flowright
+  - flowcenter
+- - flowcenter
+  - flowleft
+skeleton_color: black
+pcutoff: 0.01
+colormap: jet
+dotsize: 2
+alphaValue: 0.8
+markerType: '*'
+markerColor: r
+
+# Number of cameras, camera names, path of the config files, shuffle index and trainingsetindex used to analyze videos:
+num_cameras: 2
+camera_names:
+- camera-1
+- camera-2
+scorername_3d: DLC_3D # Enter the scorer name for the 3D output
+trainingsetindex_camera-1: 0
+trainingsetindex_camera-2: 0
+config_file_camera-1: C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestdroite-lili-2024-06-02\config.yaml
+config_file_camera-2: C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestgauche-lili-2024-06-02\config.yaml
+shuffle_camera-1: 1
+shuffle_camera-2: 1
