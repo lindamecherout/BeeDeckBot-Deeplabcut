@@ -1,0 +1,30 @@
+# Project name
+project = "beepose"
+video_extension = 'mp4'
+
+# Change this to match deeplabcut folder (one with trained network)
+model_folder = 'C:\Users\Lili\Desktop\STAGE ISM\DLC\test 8\2d\2dbeetestdroite-lili-2024-06-02'
+
+# How many folders are nested in structure?
+nesting = 1
+
+[pipeline]
+videos_raw = "videos_raw" # change this if you'd like to change name of "videos-raw" folder
+
+# labeling scheme...specify lines that you want to draw for visualizing labels in videos
+[labeling]
+scheme = [
+  ["beehead", "beecenter"],
+  ["beecenter", "beeback"],
+  ["flowright", "flowcenter"],
+  ["flowcenter", "flowleft"]
+]
+
+# Settings for a threshold filter
+# Removes data outside threshold (probably errors in tracking), and interpolates
+[filter]
+enabled = true
+medfilt = 13 # length of median filter
+offset_threshold = 25 # offset from median filter to count as jump
+score_threshold = 0.8 # score below which to count as bad
+spline = true # interpolate using cubic spline instead of linear

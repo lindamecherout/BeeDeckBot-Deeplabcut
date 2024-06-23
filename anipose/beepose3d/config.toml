@@ -1,0 +1,38 @@
+project = 'beepose3d'
+
+nesting = 1
+videos_raw = "videos-raw"
+video_extension = 'mp4'
+
+[calibration]
+# checkerboard / charuco / aruco
+board_type = "checkerboard"
+board_size = [8, 5]
+board_square_side_length = 3 #cm
+board_marker_length = 3 #cm
+animal_calibration = false
+fisheye = false
+
+[manual_verification]
+# true / false
+manually_verify = false
+
+[labeling]
+scheme = [
+  ["beehead", "beecenter"],
+  ["beecenter", "beeback"],
+  ["flowright", "flowcenter"],
+  ["flowcenter", "flowleft"]
+]
+
+[triangulation]
+triangulate = true
+cam_regex = 'cam([0-9])'
+ransac = false
+optim = false
+scale_smooth = 25
+scale_length = 10
+scale_length_weak = 2
+reproj_error_threshold = 3
+score_threshold = 0.6
+n_deriv_smooth = 2
